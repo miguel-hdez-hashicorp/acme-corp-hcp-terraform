@@ -1,8 +1,11 @@
-# Outputs file
-output "catapp_url" {
-  value = "http://${aws_eip.hashicat.public_dns}"
+# Copyright (c) HashiCorp, Inc.
+# SPDX-License-Identifier: MPL-2.0
+
+output "instance_ami" {
+  value = aws_instance.ubuntu.ami
 }
 
-output "catapp_ip" {
-  value = "http://${aws_eip.hashicat.public_ip}"
+output "instance_arn" {
+  value = aws_instance.ubuntu.arn
 }
+
